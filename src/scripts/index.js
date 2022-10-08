@@ -24,5 +24,8 @@ AFRAME.registerComponent('foo', {
                 loadingStatus.textContent = `Загружено моделей: ${loadedModelsCount}/${totalModelsCount}`
             }
         })
+        this.el.addEventListener("markerFound", e => {
+            loaderBlur.classList.remove("disabled")
+        })
     }
 })
